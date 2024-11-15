@@ -39,20 +39,28 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden">
-          <Link to="/"
-            className="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-orange-600">
+          <Link
+            to="/"
+            className="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-orange-600"
+            onClick={() => setIsOpen(false)}>
             Home
           </Link>
-          <Link to="/about"
-            className="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-orange-600">
+          <Link
+            to="/about"
+            className="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-orange-600"
+            onClick={() => setIsOpen(false)}>
             About
           </Link>
-          <Link to="/work"
-            className="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-orange-600">
+          <Link
+            to="/work"
+            className="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-orange-600"
+            onClick={() => setIsOpen(false)}>
             My Work
           </Link>
-          <Link to="/contact"
-            className="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-orange-600">
+          <Link
+            to="/contact"
+            className="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-orange-600"
+            onClick={() => setIsOpen(false)}>
             Contact
           </Link>
         </div>
