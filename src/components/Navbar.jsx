@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,18 +14,18 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-white text-lg font-semibold">Portfolio</div>
         <div className="hidden md:flex space-x-6">
-          <a href="/" className="text-gray-300 hover:text-orange-600">
+          <Link to="/" className="text-gray-300 hover:text-orange-600">
             Home
-          </a>
-          <a href="/about" className="text-gray-300 hover:text-orange-600">
+          </Link>
+          <Link to="/about" className="text-gray-300 hover:text-orange-600">
             About
-          </a>
-          <a href="/work" className="text-gray-300 hover:text-orange-600">
+          </Link>
+          <Link to="/work" className="text-gray-300 hover:text-orange-600">
             My Work
-          </a>
-          <a href="/contact" className="text-gray-300 hover:text-orange-600">
+          </Link>
+          <Link to="/contact" className="text-gray-300 hover:text-orange-600">
             Contact
-          </a>
+          </Link>
         </div>
         <div className="md:hidden">
           <button
@@ -38,26 +39,22 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden">
-          <a
-            href="/"
+          <Link to="/"
             className="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-orange-600">
             Home
-          </a>
-          <a
-            href="/about"
+          </Link>
+          <Link to="/about"
             className="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-orange-600">
             About
-          </a>
-          <a
-            href="/work"
+          </Link>
+          <Link to="/work"
             className="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-orange-600">
             My Work
-          </a>
-          <a
-            href="/contact"
+          </Link>
+          <Link to="/contact"
             className="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-orange-600">
             Contact
-          </a>
+          </Link>
         </div>
       )}
     </nav>
