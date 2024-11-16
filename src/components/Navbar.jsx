@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,6 +12,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gray-600 p-4 shadow-md shadow-orange-500 fixed top-0 w-full z-10">
+      <Toaster/>
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-white text-lg font-semibold">Portfolio</div>
         <div className="hidden md:flex space-x-6">

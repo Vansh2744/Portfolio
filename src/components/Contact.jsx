@@ -1,5 +1,6 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
+import {toast} from "react-hot-toast"
 
 function SignUp() {
   const [user, setUser] = useState({
@@ -22,9 +23,13 @@ function SignUp() {
         user,
         "sdx5rEpUhhLiyv3Am" // Replace with your EmailJS user ID
       )
-      .then((result) => {
-        console.log("Email sent successfully!");
-        console.log(result);
+      .then(() => {
+        toast.success("Email sent successfully!");
+        setUser({
+          name: "",
+          email: "",
+          message: "",
+        })
       })
       .catch((error) => {
         console.error("Error sending email:", error);
